@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    background-color: rgb(227, 227, 227);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_circle {
+    position: fixed;
+    top: 8%;
+    left: -5%;
+    width: 640px;
+    height: 640px;
+    z-index: -1;
+
+    border-radius: 50%;
+
+    background-color: #C90000;
+}
+
+.signin_container {
+    flex-direction: column;
+    width: 50%;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-radius: 1rem;
+    transition: 0.1s ease;
+
+    /* background-color: #323232; */
+    color: white;
+
+    backdrop-filter: blur(10px);
+    border: 3.5px solid white;
+    border-radius: 1.3rem;
+}
+
+.signin_container:hover {
+    transform: translateY(-6px);
+}
+
+.signin_container h2 {
+    margin-bottom: 1.5rem;
+    color: #FFC300;
+}
+
+.full_name {
+    width: 80%;
+    justify-content: space-between;
+}
+
+.name {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 46%;
+}
+
+lable {
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+}
+
+label {
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+}
+
+input {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid white;
+    outline: none;
+
+    background: transparent;
+}
+
+input::placeholder{
+    color: white;
+}
+
+.email {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.phone {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.phone input {
+    margin-top: 0.5rem;
+}
+
+.password {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+
+.signin_container button {
+    width: 80%;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #FFC300;
+    color: white;
+    transition: 0.3s linear;
+}
+
+.signin_container button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(40deg, #FFC300 50%, #b48a00);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #C90000;
+}
+
+.signin_container div a {
+    margin-left: 0.5rem;
+}
+
+.signin_container a {
+    margin-top: 1rem;
+}
+
+
+@media only screen and (max-width:992px) {
+    .signin_container {
+        width: 60%;
+    }
+
+    .background_circle {
+        left: -20%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .signin_container {
+        width: 75%;
+    }
+
+    .background_circle {
+        left: -40%;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .signin_container {
+        width: 90%;
+    }
+
+    .background_circle {
+        left: -60%;
+    }
+}
+
+@media only screen and (max-width:410px) {
+    .signin_container {
+        width: 95%;
+    }
+
+    .background_circle {
+        left: -110%;
+    }
+}

@@ -1,0 +1,237 @@
+html {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(227, 227, 227);
+}
+
+.background_circle {
+    position: fixed;
+    top: 8%;
+    left: -5%;
+    width: 640px;
+    height: 640px;
+    z-index: -1;
+
+    border-radius: 50%;
+
+    background-color: #C90000;
+}
+
+.login_container {
+    width: 60%;
+    height: 75%;
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+    border: 3.5px solid white;
+    border-radius: 1.3rem;
+}
+
+.form_container {
+    width: 70%;
+}
+
+form {
+    width: 100%;
+    flex-direction: column;
+
+    color: white;
+}
+
+form h1 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+form lable {
+    width: 55%;
+    padding-left: 0.8rem;
+    font-size: 14px;
+}
+
+form input {
+    width: 55%;
+    height: 2rem;
+    margin-top: 0.3rem;
+    padding-left: 0.8rem;
+
+    border: 1.5px solid white;
+    border-radius: 2rem;
+    outline: none;
+
+    color: white;
+    font-size: 14px;
+    background: transparent;
+}
+
+input::placeholder{
+    color: white;
+}
+
+form span {
+    width: 55%;
+    height: 1rem;
+    /* margin: 0.2rem 0 0.5rem 0; */
+    padding-left: 0.8rem;
+
+    font-size: 13px;
+}
+
+.name_validation {
+
+}
+
+form button {
+    width: 55%;
+    height: 2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    
+
+    border: none;
+    border-radius: 2rem;
+    transition: 0.3s linear;
+    cursor: pointer;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(40deg, #FFC300 50%, #b48a00);
+    color: white;
+}
+
+.signup a {
+    margin-left: 0.5rem;
+}
+
+a {
+    text-decoration:none;
+    margin-top: 0.8rem;
+    color: white;
+    font-size: 14px;
+
+    transition: 0.2s linear;
+}
+
+a:hover {
+    color: #FFC300;
+}
+
+.login_img {
+    width: 30%;
+    height: 100%;
+
+    background-color: white;
+}
+
+.login_img img {
+    width: 11rem;
+    height: 10rem;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .background_circle {
+        left: -20%;
+    }
+
+    .login_container {
+        width: 75%;
+    }
+
+    .form_container {
+        width: 65%;
+    }
+
+    form lable, form input, form button, form span {
+        width: 60%;
+    }
+
+    .login_img {
+        width: 35%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .background_circle {
+        left: -40%;
+    }
+
+    .login_container {
+        width: 80%;
+    }
+
+    .form_container {
+        width: 66%;
+    }
+
+    form lable, form input, form button, form span {
+        width: 70%;
+    }
+
+    .login_img {
+        width: 35%;
+    }
+
+    .login_img img {
+        width: 10rem;
+        height: 9rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .background_circle {
+        left: -60%;
+    }
+
+    .login_container {
+        width: 70%;
+    }
+
+    .form_container {
+        width: 100%;
+    }
+
+    .login_img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .background_circle {
+        left: -110%;
+    }
+
+    .login_container {
+        width: 80%;
+    }
+}

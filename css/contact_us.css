@@ -1,0 +1,218 @@
+/* @import "style.css"; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.html {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background-color: #E3E3E3;
+}
+
+.contact_container {
+    position: relative;
+    width: 70%;
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    /* gap: 2rem; */
+
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.contact_ways {
+    flex-direction: column;
+}
+
+.contact_ways::after {
+    content: '';
+    display: block;
+    width: 1.5px;
+    height: 250px;
+    position: absolute;
+    top: 18%;
+    left: 25%;
+
+    border-right: 1.5px solid #504F4F;
+}
+
+.contact_ways_items {
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.contact_ways_items h4 {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    color: #C90000;
+}
+
+.contact_ways_items p {
+    text-align: center;
+    font-size: 13px;
+    color: #504F4F;
+}
+
+.contact_icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contact_msg {
+    padding: 0 3rem;
+}
+
+.message_form {
+    width: 100%;
+    /* background-color: #C90000; */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.message_form h2 {
+    margin-bottom: 0.5rem;
+    color: #C90000;
+}
+
+.message_form p {
+    width: 95%;
+    margin-bottom: 0.3rem;
+    line-height: 1.3rem;
+    color: #323232;
+}
+
+.message_form input, .message_form textarea {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 0.7rem;
+    margin: 0.3rem 0;
+
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    font-size: 13px;
+    background-color: #E3E3E3;
+}
+
+.message_form textarea {
+    resize: none;
+    height: 5rem;
+}
+
+.message_form button {
+    width: 5.5rem;
+    height: 1.9rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+
+    transition: 0.2s linear;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    background-color: #C90000;
+}
+
+.message_form button:hover {
+    font-weight: bold;
+    transform: translateY(-4px);
+    background: linear-gradient(40deg, #C90000 50%, #9a0000);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .contact_container {
+        width: 80%;
+        grid-template-columns: 0.7fr 1.3fr;
+    }
+
+    .contact_ways::after {
+        left: 33%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .html {
+        height: auto;
+    }
+
+    .contact_container {
+        width: 80%;
+        margin: 2rem 0;
+        grid-template-columns: 1fr;
+    }
+
+    .contact_ways {
+        order: 1;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+    }
+
+    .contact_ways::after {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .contact_container {
+        width: 90%;
+    }
+
+    .contact_msg {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .message_form {
+        align-items: center;    
+    }
+
+    .message_form h2 {
+        font-size: 1.5rem;
+    }
+
+    .message_form p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .contact_ways {
+        flex-wrap: wrap;
+    }
+
+    .contact_ways_items {
+        width: 35%;
+    }
+}

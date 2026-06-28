@@ -1,0 +1,917 @@
+/* @import "style.css";
+@import "responsive.css"; */
+
+.main {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.main_title  {
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: var(--main__color);
+}
+
+.title_border {
+    position: absolute;
+    bottom: 11px;
+    width: 7.1rem;
+    margin-left: 0.3rem;
+    height: 0.5rem;
+    z-index: -1;
+
+    background-color: var(--shadow__color);
+}
+
+.menu {
+    /* width: max-content; */
+    margin-bottom: 1.5rem;
+    justify-content: flex-start;
+
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.menu_items {
+    /* width: max-content; */
+    padding: 0.7rem 1.2rem;
+    margin-right: 1.5rem;
+    border-radius: 2rem;
+
+    color: var(--gray__header__menu__color);
+    background-color: var(--menu__item__background__color);
+
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.menu_items:hover {
+    color: var(--gray__price__color);
+    background-color: var(--second__main__color);
+}
+
+.menu_items_active {
+    color: var(--gray__price__color);
+    background-color: var(--second__main__color);
+}
+
+/* ..................................................................................... */
+.menu_section {
+    overflow: hidden;
+}
+
+.all_product {
+    width: 100%;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.5s ease;
+}
+
+.all_product_items {
+    display: block;
+    min-width: 100%;
+    transition: 0.5s ease;
+}
+
+.product {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1rem; 
+}
+
+.product_items {
+    /* width: 32%; */
+    height: 20rem;
+    padding: 0 1rem;
+    margin-bottom: 2%;
+    z-index: 5;
+
+    transition: 0.3s linear;
+    border: 1px solid var(--menu__item__border__color);
+    border-radius: 1rem;
+    background-color: white;
+
+    /* box-shadow: 0.2rem 0.2rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.6rem #fff; */
+}
+
+.product_items_img {
+    /* width: 100%; */
+    position: relative;
+    height: 57%;
+    margin-bottom: 0.5rem;
+}
+
+.product_img_shadow {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 5rem;
+    opacity: 0.4;
+    z-index: 4;
+
+    background-color: var(--shadow__color);
+}
+
+.product_items_img img {
+    width: 70%;
+    height: 100%;
+
+    z-index: 6;
+}
+
+.product_items h3 {
+    /* font-size: 1.2rem; */
+    color: var(--gray__price__color);
+}
+
+.star {
+    justify-content: flex-start;
+    padding: 0.3rem 0;
+    font-size: 14px;
+    color: var(--gray__text__color);
+}
+
+.star_img {
+    margin-right: 0.5rem;
+}
+
+.star_img_items {
+    width: 1rem;
+    height: 1rem;
+}
+
+.buy {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.buy_price {
+    font-weight: bold;
+    color: var(--gray__price__color);
+}
+
+.buy button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 1rem;
+
+    color: white;
+    background-color: var(--main__color);
+    cursor: pointer;
+}
+
+.product_all_link {
+    cursor: pointer;
+    margin-top: 1rem;
+
+    text-decoration: underline;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gray__price__color);
+}
+
+/* sale off --------------------------------------------------------------------------------------------------- */
+.saleoff_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.saleoff_title_border {
+    width: 14.5rem;
+    bottom: 10px;
+    margin-left: -0.1rem;
+}
+
+.saleoff_item_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.saleoff_items {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-left: 2rem;
+    height: 17rem;
+    border-radius: 1rem;
+    transition: 0.4s linear;
+
+    background-color: var(--menu__item__background__color);
+    background-image: url("../src/chicken-bk.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* saleoff items hover  ----------------------------------------------- */
+.saleoff_items:hover {
+    transform: translateY(-8px);
+    background-color: var(--main__color);
+}
+
+.saleoff_items:hover .saleoff_items_lable{
+    color: white;
+}
+
+.saleoff_items:hover .saleoff_items_lable_line{
+    background-color: white;
+}
+
+.saleoff_items:hover .saleoff_items_title {
+    color: var(--second__main__color);
+}
+
+.saleoff_items:hover .saleoff_items_info {
+    color: white;
+}
+
+.saleoff_items:hover .real_price {
+    color: white;
+}
+
+.saleoff_items:hover .off_price {
+    color: var(--second__main__color);
+}
+
+.saleoff_items:hover .saleoff_items_button {
+    background-color: white;
+    color: var(--gray__price__color);
+}
+
+
+/* second saleoff item & hover-------------------------- */
+.saleoff_items:nth-child(2) {
+    height: 18rem;
+    background-color: var(--main__color);
+    background-image: url("../src/salad_bk.png");
+}
+
+.saleoff_items:nth-child(2):hover {
+    transform: translateY(8px);
+    background-color: var(--menu__item__background__color);
+}
+
+.saleoff_items:nth-child(2):hover .saleoff_items_lable{
+    color: var(--gray__text__color);
+}
+
+.saleoff_items:nth-child(2):hover .saleoff_items_lable_line{
+    background-color: var(--gray__text__color);
+}
+
+.saleoff_items:nth-child(2):hover .saleoff_items_title {
+    color: var(--main__color);
+}
+
+.saleoff_items:nth-child(2):hover .real_price {
+    color:  var(--gray__text__color);
+}
+
+.saleoff_items:nth-child(2):hover .off_price {
+    color:  var(--main__color);
+}
+
+.saleoff_items:nth-child(2):hover .saleoff_items_button {
+    background-color: var(--gray__price__color);
+    color: white;
+}
+
+/*  ------------------------------------------------------------------ */
+
+.saleoff_items:nth-child(3) {
+    background-image: url("../src/pizza_slice_bk.png");
+}
+
+.saleoff_items_lable {
+    color: var(--gray__price__color);
+    font-size: 15px;
+    width: 100%;
+}
+
+.saleoff_items:nth-child(2) .saleoff_items_lable{
+    color: white;
+}
+
+.saleoff_items_lable span {
+    width: 22%;
+}
+
+.saleoff_items:nth-child(3) .saleoff_items_lable span {
+    width: 18%;
+}
+
+.saleoff_items_lable_line {
+    width: 78%;
+    height: 0.9px;
+    background-color: var(--gray__text__color);
+}
+
+.saleoff_items:nth-child(2) .saleoff_items_lable_line{
+    height: 0.5px;
+    background-color: white;
+}
+
+.saleoff_items:nth-child(3) .saleoff_items_lable_line {
+    width: 82%;
+}
+
+.saleoff_items_title {
+    padding: 0.5rem 0;
+    color: var(--main__color);
+}
+
+.saleoff_items:nth-child(2) .saleoff_items_title {
+    width: 60%;
+    color: var(--second__main__color);
+}
+
+.saleoff_items_info {
+    width: 50%;
+    color: var(--gray__text__color);
+}
+
+.saleoff_items_price {
+    margin: 0.8rem 0 2.5rem 0;
+    color: var(--gray__price__color);
+}
+
+.saleoff_items:nth-child(3) .saleoff_items_price {
+    margin: 0.8rem 0 3.5rem 0;
+}
+
+.real_price {
+    text-decoration: line-through;
+    font-size: 1rem;
+    margin-right: 0.7rem;
+}
+
+.saleoff_items:nth-child(2) .real_price {
+    color: white;
+}
+
+.off_price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--main__color);
+}
+
+.saleoff_items:nth-child(2) .off_price {
+    color: var(--second__main__color);
+}
+
+.saleoff_items_button {
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--gray__price__color);
+    color: white;
+}
+
+.saleoff_items:nth-child(2) .saleoff_items_button {
+    margin-top: 0.9rem;
+    background-color: white;
+    color: var(--gray__price__color);
+}
+
+/* mobile app ----------------------------------------------------------------------------------------------- */
+.mobile_app_container {
+    position: relative;
+
+    width: 100%;
+    height: 18rem;
+    margin: 5rem 0;
+    justify-content: flex-end;
+
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;  
+}
+
+.mobile_app {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.7fr 1.1fr;
+    width: 100% + 8rem;
+    height: 100%;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+
+    position: absolute;
+    left: -8rem;
+    background-color: var(--menu__item__background__color);
+}
+
+.mobile_app_img {
+    position: relative;
+}
+
+.iphone_img {
+    position: absolute;
+    left: 3rem;
+    bottom: -0.3rem;
+}
+
+.mobile_app_detail {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mobile_app_detail_lable {
+    color: var(--gray__price__color);
+}
+
+.mobile_app_detail_title {
+    color: var(--main__color);
+    margin: 0.5rem 0;
+}
+
+.mobile_app_detail_info {
+    width: 75%;
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+
+    color: var(--gray__text__color);
+    font-size: 13px;
+    line-height: 1.3rem;
+}
+
+.links {
+    flex-direction: column;
+    margin-right: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    border-radius: 2rem;
+    background-color: var(--gray__price__color);
+    color: white;
+}
+
+.links span:first-child {
+    color: rgba(255, 255, 255, 0.607);
+    font-size: 10px;
+}
+
+.links span:nth-child(2) {
+    color: rgba(255, 255, 255, 0.607);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* search --------------------------------------------------------------------------------------------------- */
+.search {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    flex-direction: column;
+    overflow: hidden;
+
+    border-radius: 1rem;
+    background-color: var(--gray__price__color);
+    color: white;
+}
+
+.search img {
+    position: absolute;
+}
+
+.search_salad_img {
+    left: -1.5rem;
+    top: 20%;
+    height: 5rem;
+    width: 6rem;
+}
+
+.search_pizza_img {
+    width: 6rem;
+    height: 6rem;
+    bottom: -2rem;
+}
+
+.search_humber_img {
+    width: 6rem;
+    height: 6rem;
+    top: 0;
+    right: 5%;
+}
+
+.search_title {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.search_box {
+    width: 40%;
+    margin-top: 2rem;
+    border-radius: 2rem;
+
+    background-color: var(--second__main__color);
+}
+
+.search_box input {
+    width: 70%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    outline: none;
+
+    background-color: transparent;
+    border: none;
+}
+
+.search_box div {
+    width: 25%;
+    height: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    font-size: 14px;
+    color: var(--gray__price__color);
+    background-color: white;
+}
+
+
+/* responsive ------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+    /* saleoff -------------------------- */
+    .saleoff_items_lable span {
+        width: 24%;
+    }
+
+    .saleoff_items_lable_line {
+        width: 75%;
+    }
+
+    /* mobile app ------------------------ */
+    .mobile_app {
+        grid-template-columns: 0.7fr 1fr;
+    }
+
+    .iphone_img {
+        left: 6rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* products ------------------------ */
+    .product_items h3 {
+        font-size: 1rem;
+    }
+
+    /* saleoff -------------------------- */
+    .saleoff_items_lable span {
+        width: 35%;
+    }
+
+    .saleoff_items_lable_line {
+        width: 65%;
+    }
+
+    .saleoff_items:nth-child(2) .saleoff_items_title {
+        width: 90%;
+    }
+
+    .saleoff_items:nth-child(3) .saleoff_items_lable span {
+        width: 27%;
+    }
+
+    /* mobile app ------------------------ */
+    .mobile_app {
+        grid-template-columns: 0.75fr 1fr;
+        height: 16rem;
+    }
+
+    .mobile_app_detail {
+        margin-left: 2rem;
+    }
+
+    .mobile_app_detail_lable {
+        font-size: 0.9rem;
+    }
+
+    .mobile_app_detail_title {
+        font-size: 1.7rem;
+    }
+
+    .mobile_app_detail_info {
+        width: 90%;
+        font-size: 10px;
+        line-height: 1.1rem;
+    }
+
+    .links span:first-child {
+        font-size: 8px;
+    }
+    
+    .links span:nth-child(2) {
+        font-size: 10px;
+    }
+
+    /* search -------------------------- */
+    .search_box {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* products ------------------------ */
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product_items h3 {
+        font-size: 1.2rem;
+    }
+
+    /* saleoff -------------------------- */
+    .saleoff_item_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .saleoff_items:nth-child(2) {
+        height: 17rem;
+    }
+
+    .saleoff_items:nth-child(2):hover {
+        transform: translateY(-8px);
+    }
+
+    /* mobile app ------------------------ */
+    .mobile_app {
+        grid-template-columns: 0.8fr 0.8fr;
+        height: 14rem;
+    }
+
+    .iphone_img {
+        left: 7rem;
+    }
+
+    .mobile_app_detail {
+        margin-left: 2rem;
+    }
+
+    .mobile_app_detail_lable {
+        font-size: 0.7rem;
+    }
+
+    .mobile_app_detail_title {
+        font-size: 1rem;
+    }
+
+    .mobile_app_detail_info {
+        margin-bottom: 1rem;
+    }
+
+    /* search -------------------------- */
+    .search_box {
+        width: 70%;
+    }
+
+    .search_title {
+        font-size: 1.4rem;
+    }
+
+    .search_info {
+        margin-top: 0.3rem;
+        margin-bottom: 0.5rem;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main_title {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* products ------------------------ */
+    .product {
+        grid-template-columns: 1fr;
+    }
+
+    .product_items {
+        height: 25rem;
+    }
+
+    .product_items_img {
+        margin-top: 1rem;
+    }
+
+    .product_img_shadow {
+        top: 44%;
+        height: 7rem;
+    }
+
+    /* saleoff -------------------------- */
+    .saleoff_item_container {
+        grid-template-columns: 1fr;
+    }
+
+    .saleoff_items_lable {
+        justify-content: space-between;
+    }
+
+    .saleoff_items_lable span {
+        width: 20%;
+    }
+
+    .saleoff_items_lable_line {
+        width: 80%;
+    }
+
+    .saleoff_items:nth-child(2) .saleoff_items_title {
+        width: 60%;
+    }
+    
+    .saleoff_items:nth-child(3) .saleoff_items_lable span {
+        width: 15%;
+    }
+
+    .saleoff_items:nth-child(3) .saleoff_items_lable_line {
+        width: 85%;
+    }
+
+    /* moblie app ---------------------------------------- */
+    .mobile_app_container {
+        margin: 2rem 0;
+        height: 38rem;
+    }
+
+    .mobile_app_detail {
+        align-items: center;
+        margin-right: 4rem;
+        height: 70%;
+    }
+    
+    .mobile_app {
+        grid-template-columns: 1fr;
+        height: 38rem;
+        left: -2rem;
+
+        overflow: hidden;
+    }
+
+    .mobile_app_img {
+        order: 2;
+    }
+
+    .iphone_img {
+        left: 15%;
+    }
+
+    .mobile_app_detail_lable {
+        font-size: 0.8rem;
+    }
+
+    .mobile_app_detail_title {
+        font-size: 1.3rem;
+    }
+
+    .mobile_app_detail_info {
+        width: 90%;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.3rem;
+    }
+
+    .download_link {
+        padding-left: 1.5rem;
+    }
+
+    .links span:first-child {
+        font-size: 8px;
+    }
+    
+    .links span:nth-child(2) {
+        font-size: 9px;
+    }
+
+    /* search -------------------------- */
+    .search_box {
+        width: 80%;
+    }
+
+    .search_box div {
+        font-size: 12px;
+    }
+
+    .search_title {
+        font-size: 1rem;
+        z-index: 10;    
+    }
+
+    .search_info {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    /* saleoff -------------------------- */
+    .saleoff_items_lable span {
+        width: 32%;
+    }
+
+    .saleoff_items:nth-child(2) .saleoff_items_title {
+        width: 80%;
+    }
+    
+    .saleoff_items:nth-child(3) .saleoff_items_lable span {
+        width: 21%;
+    }
+
+    /* mobile app --------------------- */
+    .mobile_app {
+        grid-template-columns: 1fr;
+        height: 37rem;
+        left: 0;
+        row-gap: 0;
+
+        border-top-left-radius: 10rem;
+        border-bottom-right-radius: 0;
+    }
+
+    .iphone_img {
+        left: 5%;
+        width: 85%;
+    }
+
+    .mobile_app_detail {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .mobile_app_detail_lable {
+        font-size: 0.7rem;
+    }
+
+    .mobile_app_detail_title {
+        font-size: 1rem;
+    }
+
+    .mobile_app_detail_info {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+
+        font-size: 8px;
+        line-height: 1rem;
+        text-align: center;
+    }
+
+    .links span:first-child {
+        font-size: 7px;
+    }
+    
+    .links span:nth-child(2) {
+        font-size: 8px;
+    }
+
+    /* search -------------------------- */
+    .search_box {
+        width: 85%;
+    }
+    .search_box input {
+        width: 65%;
+        font-size: 12px;
+    }
+
+    .search_box div {
+        width: 30%;
+        font-size: 11px;
+    }
+
+    .search_title {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .search_salad_img {
+        top: 5%;
+    }
+
+    .search_humber_img {
+        right: -1rem;
+    }
+}
