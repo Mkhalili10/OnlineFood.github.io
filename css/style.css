@@ -72,9 +72,10 @@ img {
     width: 65rem;
     justify-content: space-between;
     z-index: 150;
-    background-color: var(--menu__item__border__color);
+    /* background-color: var(--menu__item__border__color); */
+    background-color: #e3e3e361;
+    backdrop-filter: blur(6px);
 }
-
 .header_logo {
     padding: 0.5rem 1rem;
     cursor: pointer;
