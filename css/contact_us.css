@@ -183,7 +183,6 @@ a {
     }
 }
 
-
 @media only screen and (max-width: 576px) {
     .contact_container {
         width: 90%;
@@ -192,9 +191,7 @@ a {
     .contact_msg {
         padding: 0 1rem;
     }
-}
 
-@media only screen and (max-width: 410px) {
     .message_form {
         align-items: center;    
     }
