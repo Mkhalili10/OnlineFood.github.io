@@ -94,7 +94,7 @@ img {
 }
 
 .header_nav_bar0 {
-    width: 33%;
+    width: 35%;
     position: fixed;
     top: 0.1rem;
     left: -35%;
@@ -805,6 +805,7 @@ i:nth-child(4):hover {
     /* header ---------------------------- */
     .header_nav_bar0 {
         width: 45%;
+        left: -45%
     }
 
     .header_nav_bar {
@@ -936,6 +937,7 @@ i:nth-child(4):hover {
 
     .header_nav_bar0 {
         width: 50%;
+        left: -50%
     }
 
     .header_nav_bar {
